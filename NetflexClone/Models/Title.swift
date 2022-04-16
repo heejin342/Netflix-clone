@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TrendginTitleResponse: Codable {
+struct TrendingTitleResponse: Codable {
     let results: [Title]
 }
 
@@ -22,3 +22,4 @@ struct Title: Codable {
     let release_date: String?
     let vote_average: Double
 }
+
