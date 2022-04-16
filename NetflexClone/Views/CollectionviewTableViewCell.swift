@@ -56,17 +56,14 @@ class CollectionViewTableViewCell: UITableViewCell {
     
     private func downloadTitleAt(indexPath: IndexPath) {
         
-    
-//        DataPersistenceManager.shared.downloadTitleWith(model: titles[indexPath.row]) { result in
-//            switch result {
-//            case .success():
-//                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
-//        
-
+        DataPersistanceMaganer.shared.downloadTitleWith(model: titles[indexPath.row]) { result in
+            switch result {
+            case .success():
+               NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
